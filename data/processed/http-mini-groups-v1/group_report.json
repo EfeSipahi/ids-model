@@ -1,0 +1,795 @@
+{
+  "version": "endpoint-template-v1",
+  "input_sha256": "9ae3394d3ead353e8ca88b8ebb0b4c2d0cf7ac0a62a016aa58029807c3f39d76",
+  "encoding": "latin-1",
+  "records": 1000,
+  "groups": 53,
+  "singleton_groups": 45,
+  "largest_group": 196,
+  "mixed_label_groups": 6,
+  "top_five_records": 937,
+  "split_created": false,
+  "trained": false,
+  "policy": "Group by once-decoded path with digit runs and jsessionid normalized. Ignore method, query, body, headers and labels. No statistical fit.",
+  "limitations": [
+    "This tests transfer across endpoint templates, not random requests from known endpoints.",
+    "Digit normalization can merge different pages deliberately.",
+    "Equivalent aliases and payloads reused across different paths may remain in different groups.",
+    "Similar does not mean identical; mixed labels within a group are retained.",
+    "Grouping is not proof that every near-duplicate or leakage source is eliminated."
+  ],
+  "group_details": [
+    {
+      "group_id": "050c695a8b022fa847c4df1f0434aa4986636aacd813bba05e898d378540f1a5",
+      "endpoint_template": "/tienda{number}/miembros/editar.jsp",
+      "count": 196,
+      "labels": {
+        "0": 101,
+        "1": 95
+      },
+      "methods": {
+        "POST": 104,
+        "GET": 92
+      },
+      "example_ids": [
+        "normalTrafficTraining.txt:12988",
+        "anomalousTrafficTest.txt:9181",
+        "normalTrafficTraining.txt:29548"
+      ]
+    },
+    {
+      "group_id": "719bbc5bde9d6cdd076e718ab9bb4301858666a78ab99a68f19f112ba0286c76",
+      "endpoint_template": "/tienda{number}/publico/autenticar.jsp",
+      "count": 193,
+      "labels": {
+        "1": 75,
+        "0": 118
+      },
+      "methods": {
+        "GET": 105,
+        "POST": 88
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:3251",
+        "anomalousTrafficTest.txt:24873",
+        "normalTrafficTraining.txt:18869"
+      ]
+    },
+    {
+      "group_id": "e718acd8364332ee7bd075b5f05a917132969f7b4b380b9e5d8eb53d65da644a",
+      "endpoint_template": "/tienda{number}/publico/pagar.jsp",
+      "count": 190,
+      "labels": {
+        "1": 109,
+        "0": 81
+      },
+      "methods": {
+        "POST": 111,
+        "GET": 79
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:17911",
+        "normalTrafficTraining.txt:35904",
+        "normalTrafficTraining.txt:25033"
+      ]
+    },
+    {
+      "group_id": "c5358a4c9ac037d66b4ba80045cd4265d0d6c59a347b69287b735ac43d1dc884",
+      "endpoint_template": "/tienda{number}/publico/registro.jsp",
+      "count": 188,
+      "labels": {
+        "1": 79,
+        "0": 109
+      },
+      "methods": {
+        "POST": 96,
+        "GET": 92
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:987",
+        "anomalousTrafficTest.txt:24679",
+        "normalTrafficTraining.txt:2428"
+      ]
+    },
+    {
+      "group_id": "feb612492b3cc650522b5ade228fc48f13653a27ff0d890d46654269a6c5b42d",
+      "endpoint_template": "/tienda{number}/publico/anadir.jsp",
+      "count": 170,
+      "labels": {
+        "0": 87,
+        "1": 83
+      },
+      "methods": {
+        "GET": 78,
+        "POST": 92
+      },
+      "example_ids": [
+        "normalTrafficTraining.txt:19694",
+        "normalTrafficTraining.txt:14727",
+        "anomalousTrafficTest.txt:18283"
+      ]
+    },
+    {
+      "group_id": "fb6008710f81b997e856dacbadfae7f47ad17ce99b13ea26ed22411b9c798b31",
+      "endpoint_template": "/tienda{number}/publico/caracteristicas.jsp",
+      "count": 7,
+      "labels": {
+        "1": 7
+      },
+      "methods": {
+        "POST": 5,
+        "GET": 2
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:9567",
+        "anomalousTrafficTest.txt:7268",
+        "anomalousTrafficTest.txt:2939"
+      ]
+    },
+    {
+      "group_id": "4d1feb3c72e6c30138afb7beed497dc435184e3c08bdeff0c4264cbbf95f4507",
+      "endpoint_template": "/tienda{number}/publico/vaciar.jsp",
+      "count": 6,
+      "labels": {
+        "1": 6
+      },
+      "methods": {
+        "GET": 4,
+        "POST": 2
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:440",
+        "anomalousTrafficTest.txt:3011",
+        "anomalousTrafficTest.txt:4649"
+      ]
+    },
+    {
+      "group_id": "bbc86e448e05214755b6f8f30da28e400612d2613b6f1203407e4228bc4cd045",
+      "endpoint_template": "/tienda{number}/publico/entrar.jsp",
+      "count": 5,
+      "labels": {
+        "0": 1,
+        "1": 4
+      },
+      "methods": {
+        "POST": 2,
+        "GET": 3
+      },
+      "example_ids": [
+        "normalTrafficTraining.txt:10",
+        "anomalousTrafficTest.txt:5062",
+        "anomalousTrafficTest.txt:376"
+      ]
+    },
+    {
+      "group_id": "b5b0357dde5c40117a9150205bb1b361182227a75ffff3d52789ea5b47e6b966",
+      "endpoint_template": "/_cti_pvt/service.cnf",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:7092"
+      ]
+    },
+    {
+      "group_id": "cc1aeec43b2b6387ad0ec709ce43eb956ada156f85d7fb546bec5aae24b508ec",
+      "endpoint_template": "/asf-logo-wide.OLD",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:2600"
+      ]
+    },
+    {
+      "group_id": "f7f555bf062f8251ba7d2e7317939b94e74ec87f3b0236a0763e065596f0db9e",
+      "endpoint_template": "/asf-logo-wide.inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:6541"
+      ]
+    },
+    {
+      "group_id": "b99125ca69449c7bdc786d305f9a166c185440fe89a29d932b110d87c8feb036",
+      "endpoint_template": "/tienda{number}/.INC",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:1488"
+      ]
+    },
+    {
+      "group_id": "8864d53cc2e66edb83ce270e6f4dbe4e9496b639f95b78cfd7c1d5675211dc4c",
+      "endpoint_template": "/tienda{number}/global/menum.jsp/{number}.Old",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:806"
+      ]
+    },
+    {
+      "group_id": "f2ce1e7e1b34355f38b33aa40a848cffc41e1fa59c98f812f9cd08715cfaf143",
+      "endpoint_template": "/tienda{number}/global/titulo.jsp/{number}.jsp.INC",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:19873"
+      ]
+    },
+    {
+      "group_id": "fab148e00e21ec0e4b8b39b4b64d1381ed8e6c7660ac294c607ab762594ce048",
+      "endpoint_template": "/tienda{number}/imagenes.inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:11923"
+      ]
+    },
+    {
+      "group_id": "21475923a33082062e9e877f6897c46c78d5fc1649b25bed5f9ec70a03347541",
+      "endpoint_template": "/tienda{number}/imagenes/asf-logo-wide.gif/.java",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:13253"
+      ]
+    },
+    {
+      "group_id": "ff2d7c33b7600b4764d15391e6acd5c59cadd153b0bc651a4a14494f41b062ac",
+      "endpoint_template": "/tienda{number}/imagenes/asf-logo-wide.old",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:9998"
+      ]
+    },
+    {
+      "group_id": "873468f8e00c104a2cc05c87221e02ae955de24bc5e5f17de3ca8ce2053b9c8a",
+      "endpoint_template": "/tienda{number}/imagenes/cmenbul.gif/.Bak",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:18281"
+      ]
+    },
+    {
+      "group_id": "46122f0abafa5edadc3bfc85b365e407491e698a693418a81efe75c735ffff65",
+      "endpoint_template": "/tienda{number}/imagenes/cmenbul.gif/asf-logo-wide.gif~",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:6333"
+      ]
+    },
+    {
+      "group_id": "e5d6934f22ca9599944b2be24cc26833429696200c2d0927c28f9e828c45c127",
+      "endpoint_template": "/tienda{number}/imagenes/cmenbul.gif/asf-logo-wide.java",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:22048"
+      ]
+    },
+    {
+      "group_id": "6206cf9971ff0794688773a94feeaa8f11a8a4a32d09c20830c254386ef57b21",
+      "endpoint_template": "/tienda{number}/imagenes/logo.gif",
+      "count": 1,
+      "labels": {
+        "0": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "normalTrafficTraining.txt:35"
+      ]
+    },
+    {
+      "group_id": "4327554a3cb3da45cd59b16cb5ad1d5b51f903dae8b3dcbec8221341a42eecfb",
+      "endpoint_template": "/tienda{number}/imagenes/logo.gif/asf-logo-wide.Old",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:20988"
+      ]
+    },
+    {
+      "group_id": "6b9cb4081c6eeb23df4b35db8daa8abd2f1b62ef58346e7f7ccb91a0f03e70fc",
+      "endpoint_template": "/tienda{number}/imagenes/nuestratierra.jpg.INC",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:9664"
+      ]
+    },
+    {
+      "group_id": "71ec78c3f6aeac9e506e9bb17e7cadef6cb23fce8ed2e431c410eff679f5d7d9",
+      "endpoint_template": "/tienda{number}/imagenes/nuestratierra.jpg.Inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:5186"
+      ]
+    },
+    {
+      "group_id": "0e94f82363dc09afa9e7362e7b2b59ba2ead1ef6c4ccb4a31cef75d557c8e39a",
+      "endpoint_template": "/tienda{number}/imagenes/nuestratierra.jpg/asf-logo-wide~",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:2202"
+      ]
+    },
+    {
+      "group_id": "aa249495e8457dc5e8e58957854d9c0760aff2723ea7b1491445d83f98368477",
+      "endpoint_template": "/tienda{number}/imagenes/{number}.gif.Inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:5725"
+      ]
+    },
+    {
+      "group_id": "768a7636b74a20c05dd3c1a750f7ee92002b347976a8cd9d105952d1e28919fd",
+      "endpoint_template": "/tienda{number}/imagenes/{number}.gif/asf-logo-wide.gif.inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:4664"
+      ]
+    },
+    {
+      "group_id": "3def2f5baacc726af74dd32361587312709fa8b1b0ea39af6ab336aee2cc7aa8",
+      "endpoint_template": "/tienda{number}/index.jsp/",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:15022"
+      ]
+    },
+    {
+      "group_id": "4e04fb3c178987b76030470c60b9285c91fae0331801e1850011bf79e3947a28",
+      "endpoint_template": "/tienda{number}/miembros/asf-logo-wide",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:1775"
+      ]
+    },
+    {
+      "group_id": "638de2f1d06ab8beb447f690fa2a33b12cb26c9d45710d1f1ea427ac10ac5344",
+      "endpoint_template": "/tienda{number}/miembros/editar.jsp/asf-logo-wide",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:904"
+      ]
+    },
+    {
+      "group_id": "38ab2046164bf1e813b9aa051778117e4813c8b026ab529fa6b24058809a77c4",
+      "endpoint_template": "/tienda{number}/miembros/editar.jsp/asf-logo-wide.gif.OLD",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:21887"
+      ]
+    },
+    {
+      "group_id": "a9f65e4339feac949e92887a44df478613743a1edc028c2110ef766e1dfbb866",
+      "endpoint_template": "/tienda{number}/miembros/fotos.jsp/asf-logo-wide.gif.Old",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:605"
+      ]
+    },
+    {
+      "group_id": "25703cb55c3056dc61aa552a76828245e78972e45f21f6f1e42b9298a8a5d9ea",
+      "endpoint_template": "/tienda{number}/miembros/imagenes/ogono.jpg.Inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:15483"
+      ]
+    },
+    {
+      "group_id": "e54e53b3b160ae10d160ab2610e738d5d0d08d289c3356d2baa3d52aa8d1c861",
+      "endpoint_template": "/tienda{number}/miembros/imagenes/ogono.jpg/asf-logo-wide",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:4407"
+      ]
+    },
+    {
+      "group_id": "faeb3d34090cb6ec1462f0147d11b84ee4f65d519dfe1924fa89e6cf5d1cd9f2",
+      "endpoint_template": "/tienda{number}/miembros/imagenes/ogono.jpg/asf-logo-wide.gif~",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:11810"
+      ]
+    },
+    {
+      "group_id": "6cc60113676560377b1fd58642bdad204cecf697e83af6d5ac35b82d8cb8a4bc",
+      "endpoint_template": "/tienda{number}/miembros/imagenes/zarauz.jpg",
+      "count": 1,
+      "labels": {
+        "0": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "normalTrafficTraining.txt:25"
+      ]
+    },
+    {
+      "group_id": "376399dca3d6a8428b59d517d72f695b74f137e4fd0a457d32b5ba29606c8295",
+      "endpoint_template": "/tienda{number}/miembros/imagenes/{number}.inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:5820"
+      ]
+    },
+    {
+      "group_id": "c08723df242cf4350e80822dfce7015e96dbbcabd6013b366d82ab13b738d6db",
+      "endpoint_template": "/tienda{number}/miembros/index.jsp/asf-logo-wide~",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:600"
+      ]
+    },
+    {
+      "group_id": "07f6ecb1129024d8cb2709fc7c6504aea438658562444c9d69c5e899043446b7",
+      "endpoint_template": "/tienda{number}/miembros/index.jsp/{number}.Bak",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:1311"
+      ]
+    },
+    {
+      "group_id": "94179061aa9a07e0c6fe9c28d7cfdf3b1bbfd23784595d873b3b51e603b50658",
+      "endpoint_template": "/tienda{number}/miembros/salir.jsp/{number}.Bak",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:10573"
+      ]
+    },
+    {
+      "group_id": "c819388420456a930da6c2b5cf73104914b05c5e8b874d8cbda16161c361f27a",
+      "endpoint_template": "/tienda{number}/publico/.BAK",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:20816"
+      ]
+    },
+    {
+      "group_id": "094064ddaadcee0b819aee867bd770d55df00799ed874194d20868627c37ce16",
+      "endpoint_template": "/tienda{number}/publico/asf-logo-wide.gif/.BAK",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:12179"
+      ]
+    },
+    {
+      "group_id": "6dbb8755bf63d85174aa45fceae2dfc2cb905eb7ad0458852769947fffc970cf",
+      "endpoint_template": "/tienda{number}/publico/carrito.jsp",
+      "count": 1,
+      "labels": {
+        "0": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "normalTrafficTraining.txt:8"
+      ]
+    },
+    {
+      "group_id": "06225627c282e7b0f4a901a03d7cf98eb6293377bc570bfc29643f9957c6a169",
+      "endpoint_template": "/tienda{number}/publico/entrar.jsp/{number}.jsp.old",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:17162"
+      ]
+    },
+    {
+      "group_id": "5eece95548c43799ec03afe929285809b00f53def01f42e24c293ec680ab78f2",
+      "endpoint_template": "/tienda{number}/publico/miembros.jsp/asf-logo-wide.gif.Inc",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:18390"
+      ]
+    },
+    {
+      "group_id": "d358877d04afed811b639ffdc9cc4cb7f1e135c49c2707886acc122727e57a57",
+      "endpoint_template": "/tienda{number}/publico/pagar.jsp/asf-logo-wide.gif/.old",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:4143"
+      ]
+    },
+    {
+      "group_id": "88459cd48cab6dc860cd38877ffff24abb97b695819427ce462a36d6d4c8399a",
+      "endpoint_template": "/tienda{number}/publico/productos.jsp/asf-logo-wide",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:3567"
+      ]
+    },
+    {
+      "group_id": "4c857b4227312fd1e92ba6c800c545df21ce60ad87fb4b76d8b2057928738229",
+      "endpoint_template": "/tienda{number}/publico/vaciar.jsp.INC",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:13144"
+      ]
+    },
+    {
+      "group_id": "7c3cf53c3ef3a3e271bcfb23e478132cc158a0ec41a0ed421ff9a0d4ee55fc70",
+      "endpoint_template": "/tienda{number}/publico/vaciar.jsp/asf-logo-wide.bak",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:22659"
+      ]
+    },
+    {
+      "group_id": "5da6d113514d6e784c5952426dc21fe5eaac4d0f2d6f361d58b44ffc32da3c22",
+      "endpoint_template": "/tienda{number}/publico/{number}.java",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:18104"
+      ]
+    },
+    {
+      "group_id": "7d683c4ece74ef74089202db558bfa665a73a3ef1bae76c59207576625a9cabd",
+      "endpoint_template": "/tienda{number}/publico/{number}.jsp.BAK",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:11845"
+      ]
+    },
+    {
+      "group_id": "9137dfc2d35ee4f3ef2968693868584c9e093629d32f798cd9ba0d091289e268",
+      "endpoint_template": "/tienda{number}/{number}.bak",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:309"
+      ]
+    },
+    {
+      "group_id": "a2b5c8e4b9c2816d7c92cc5b48aa4ea378ef1f5a17e9174c663ad6e84216b8ed",
+      "endpoint_template": "/{number}.bak",
+      "count": 1,
+      "labels": {
+        "1": 1
+      },
+      "methods": {
+        "GET": 1
+      },
+      "example_ids": [
+        "anomalousTrafficTest.txt:1721"
+      ]
+    }
+  ]
+}

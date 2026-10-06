@@ -1,0 +1,106 @@
+{
+  "version": "content-split-v1",
+  "seed": 42,
+  "input_sha256": "9ae3394d3ead353e8ca88b8ebb0b4c2d0cf7ac0a62a016aa58029807c3f39d76",
+  "features_sha256": "6f0450d2b6c0b512f6134a992aefd5caf465c695d2570a0274f229760196aa7f",
+  "records": 1000,
+  "exact_groups": 982,
+  "exact_multi_groups": 18,
+  "near_threshold": 0.97,
+  "min_similarity_text_length": 40,
+  "near_edges": 148,
+  "content_groups": 869,
+  "largest_group": 16,
+  "mixed_label_groups": 9,
+  "pinned_example_ids": [
+    "anomalousTrafficTest.txt:24679",
+    "anomalousTrafficTest.txt:987",
+    "normalTrafficTraining.txt:19694",
+    "normalTrafficTraining.txt:2428"
+  ],
+  "pinned_records": 5,
+  "splits": {
+    "train": {
+      "records": 604,
+      "groups": 523,
+      "labels": {
+        "1": 303,
+        "0": 301
+      },
+      "label_method": {
+        "1/POST": 151,
+        "1/GET": 152,
+        "0/POST": 151,
+        "0/GET": 150
+      }
+    },
+    "validation": {
+      "records": 197,
+      "groups": 175,
+      "labels": {
+        "0": 99,
+        "1": 98
+      },
+      "label_method": {
+        "0/POST": 49,
+        "1/POST": 49,
+        "1/GET": 49,
+        "0/GET": 50
+      }
+    },
+    "test": {
+      "records": 199,
+      "groups": 171,
+      "labels": {
+        "1": 99,
+        "0": 100
+      },
+      "label_method": {
+        "1/POST": 50,
+        "0/POST": 50,
+        "0/GET": 50,
+        "1/GET": 49
+      }
+    }
+  },
+  "common_groups_between_splits": 0,
+  "common_exact_content_between_splits": 0,
+  "cross_split_near_edges": 0,
+  "cross_split_long_value_reuse": [],
+  "major_endpoint_coverage": {
+    "/tienda1/publico/registro.jsp": {
+      "train": 121,
+      "test": 37,
+      "validation": 30
+    },
+    "/tienda1/publico/pagar.jsp": {
+      "test": 44,
+      "validation": 38,
+      "train": 108
+    },
+    "/tienda1/publico/anadir.jsp": {
+      "train": 104,
+      "test": 36,
+      "validation": 30
+    },
+    "/tienda1/miembros/editar.jsp": {
+      "validation": 46,
+      "test": 35,
+      "train": 115
+    },
+    "/tienda1/publico/autenticar.jsp": {
+      "train": 117,
+      "validation": 42,
+      "test": 34
+    }
+  },
+  "policy": "Exact content ignores method/parameter placement and sorts decoded parameter pairs. Near grouping requires same path and parameter-name multiset, compares serialized values with SequenceMatcher >=0.97, min length 40; identical decoded parameter values of >=40 characters also link records across endpoints. Unions connected components. 5 fixed stratified group folds: 0 test, 1 validation, 2-4 train; reviewed groups pinned train.",
+  "limitations": [
+    "Heuristic similarity is not session identity or a guarantee against all leakage.",
+    "Different parameter names/paths and differently encoded attacks may evade near grouping.",
+    "Sorting/merging query and body is a grouping policy, not server semantic equivalence.",
+    "Old balanced synthetic data only; shared endpoints intentionally allowed.",
+    "Features were previously inspected globally; this is a learning pilot, not pristine external validation."
+  ],
+  "model_trained": false
+}

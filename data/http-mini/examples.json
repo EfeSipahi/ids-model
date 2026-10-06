@@ -1,0 +1,234 @@
+[
+  {
+    "sample_id": "normalTrafficTraining.txt:19694",
+    "method": "GET",
+    "request_target": "/tienda1/publico/anadir.jsp?id=3&nombre=Jam%F3n+Ib%E9rico&precio=85&cantidad=46&B1=A%F1adir+al+carrito",
+    "original_target": "http://localhost:8080/tienda1/publico/anadir.jsp?id=3&nombre=Jam%F3n+Ib%E9rico&precio=85&cantidad=46&B1=A%F1adir+al+carrito",
+    "http_version": "HTTP/1.1",
+    "headers": [
+      [
+        "User-Agent",
+        "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)"
+      ],
+      [
+        "Pragma",
+        "no-cache"
+      ],
+      [
+        "Cache-control",
+        "no-cache"
+      ],
+      [
+        "Accept",
+        "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"
+      ],
+      [
+        "Accept-Encoding",
+        "x-gzip, x-deflate, gzip, deflate"
+      ],
+      [
+        "Accept-Charset",
+        "utf-8, utf-8;q=0.5, *;q=0.5"
+      ],
+      [
+        "Accept-Language",
+        "en"
+      ],
+      [
+        "Host",
+        "localhost:8080"
+      ],
+      [
+        "Cookie",
+        "JSESSIONID=C4E90BE0E994014679CCBCE222D1DB9A"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body": "",
+    "label": 0,
+    "label_name": "normal",
+    "source_file": "normalTrafficTraining.txt",
+    "content_group": "e23c36aa7211175f19d20b2c1802544aedf99a11a2a3b20148250e19d511500d"
+  },
+  {
+    "sample_id": "normalTrafficTraining.txt:2428",
+    "method": "POST",
+    "request_target": "/tienda1/publico/registro.jsp",
+    "original_target": "http://localhost:8080/tienda1/publico/registro.jsp",
+    "http_version": "HTTP/1.1",
+    "headers": [
+      [
+        "User-Agent",
+        "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)"
+      ],
+      [
+        "Pragma",
+        "no-cache"
+      ],
+      [
+        "Cache-control",
+        "no-cache"
+      ],
+      [
+        "Accept",
+        "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"
+      ],
+      [
+        "Accept-Encoding",
+        "x-gzip, x-deflate, gzip, deflate"
+      ],
+      [
+        "Accept-Charset",
+        "utf-8, utf-8;q=0.5, *;q=0.5"
+      ],
+      [
+        "Accept-Language",
+        "en"
+      ],
+      [
+        "Host",
+        "localhost:8080"
+      ],
+      [
+        "Cookie",
+        "JSESSIONID=79F982030BA31145DADBB0921B2C646B"
+      ],
+      [
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+      ],
+      [
+        "Connection",
+        "close"
+      ],
+      [
+        "Content-Length",
+        "257"
+      ]
+    ],
+    "body": "modo=registro&login=japan&password=d37t3%F30&nombre=Alejo&apellidos=Nadeix+Laumann&email=kuneva_germaine%40ajuntamentdebcn2-0.cy&dni=44923287D&direccion=Calle+Mestre+Chapi+48%2C+&ciudad=Vilaller&cp=28609&provincia=Tarragona&ntc=5277423827718841&B1=Registrar",
+    "label": 0,
+    "label_name": "normal",
+    "source_file": "normalTrafficTraining.txt",
+    "content_group": "e1a374cc5a9e60b9258dcca3f252a69ea0ca9467f5763c241c8070d390b75166"
+  },
+  {
+    "sample_id": "anomalousTrafficTest.txt:24679",
+    "method": "GET",
+    "request_target": "/tienda1/publico/registro.jsp?modo=registro&login=viviana&password=DeSCOngEstI%D3N&nombre=Gualberto&apellidos=Reinado+Nurnberg&email=valentova0%40longboarders.ir&dni=13369501S&direccion=Entrada+Conoles+160+10%3FA&ciudad=%3FR%2F%E1bad%2Be&cp=23140&provincia=Barcelona&ntc=8597171224843320&B1=Registrar",
+    "original_target": "http://localhost:8080/tienda1/publico/registro.jsp?modo=registro&login=viviana&password=DeSCOngEstI%D3N&nombre=Gualberto&apellidos=Reinado+Nurnberg&email=valentova0%40longboarders.ir&dni=13369501S&direccion=Entrada+Conoles+160+10%3FA&ciudad=%3FR%2F%E1bad%2Be&cp=23140&provincia=Barcelona&ntc=8597171224843320&B1=Registrar",
+    "http_version": "HTTP/1.1",
+    "headers": [
+      [
+        "User-Agent",
+        "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)"
+      ],
+      [
+        "Pragma",
+        "no-cache"
+      ],
+      [
+        "Cache-control",
+        "no-cache"
+      ],
+      [
+        "Accept",
+        "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"
+      ],
+      [
+        "Accept-Encoding",
+        "x-gzip, x-deflate, gzip, deflate"
+      ],
+      [
+        "Accept-Charset",
+        "utf-8, utf-8;q=0.5, *;q=0.5"
+      ],
+      [
+        "Accept-Language",
+        "en"
+      ],
+      [
+        "Host",
+        "localhost:8080"
+      ],
+      [
+        "Cookie",
+        "JSESSIONID=D087DE11B8818070B20FFF61E48EDF60"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body": "",
+    "label": 1,
+    "label_name": "anomalous",
+    "source_file": "anomalousTrafficTest.txt",
+    "content_group": "e327a31c6de8a0a5813bc16a27b3b922ae8c34b0b1b6411d46f8f27f2f52d24b"
+  },
+  {
+    "sample_id": "anomalousTrafficTest.txt:987",
+    "method": "POST",
+    "request_target": "/tienda1/publico/registro.jsp",
+    "original_target": "http://localhost:8080/tienda1/publico/registro.jsp",
+    "http_version": "HTTP/1.1",
+    "headers": [
+      [
+        "User-Agent",
+        "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)"
+      ],
+      [
+        "Pragma",
+        "no-cache"
+      ],
+      [
+        "Cache-control",
+        "no-cache"
+      ],
+      [
+        "Accept",
+        "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"
+      ],
+      [
+        "Accept-Encoding",
+        "x-gzip, x-deflate, gzip, deflate"
+      ],
+      [
+        "Accept-Charset",
+        "utf-8, utf-8;q=0.5, *;q=0.5"
+      ],
+      [
+        "Accept-Language",
+        "en"
+      ],
+      [
+        "Host",
+        "localhost:8080"
+      ],
+      [
+        "Cookie",
+        "JSESSIONID=04D7A9C3850CF728EC90AA963EF20DC5"
+      ],
+      [
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+      ],
+      [
+        "Connection",
+        "close"
+      ],
+      [
+        "Content-Length",
+        "278"
+      ]
+    ],
+    "body": "modo=registro&login=zander&password=arca%EDsta&nombre=Zain&apellidos=Espriella+Morcos&email=skala%40lamarsrl.la&dni=28264646S&direccion=Nardo%2C+106%2C+7-H&ciudad=%3C%21--%23include+file%3D%22archivo_secreto%22+--%3E&cp=46315&provincia=Alicante&ntc=5436324330428646&B1=Registrar",
+    "label": 1,
+    "label_name": "anomalous",
+    "source_file": "anomalousTrafficTest.txt",
+    "content_group": "a20ef2e0fc5d92ec0160ce55bfc49d65c7e25f1d4732962b49aeb40a04cbd3ba"
+  }
+]

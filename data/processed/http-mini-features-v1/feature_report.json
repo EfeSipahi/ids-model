@@ -1,0 +1,83 @@
+{
+  "extractor_version": "1.0.0",
+  "encoding": "latin-1",
+  "records": 1000,
+  "basic_features": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "duplicate_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "control_char_count",
+    "digit_ratio",
+    "whitespace_ratio"
+  ],
+  "pattern_features": [
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "path_traversal_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "labels": {
+    "1": 500,
+    "0": 500
+  },
+  "parse_status": {
+    "query": {
+      "empty": 545,
+      "parsed": 455
+    },
+    "body": {
+      "parsed": 500,
+      "empty": 500
+    },
+    "path": {
+      "parsed": 1000
+    }
+  },
+  "missing_values": {
+    "path_length": 0,
+    "query_length": 0,
+    "body_length": 0,
+    "query_param_count": 0,
+    "body_param_count": 0,
+    "duplicate_param_count": 0,
+    "max_value_length": 0,
+    "mean_value_length": 0,
+    "percent_encoding_count": 0,
+    "percent_encoding_ratio": 0,
+    "quote_count": 0,
+    "angle_bracket_count": 0,
+    "semicolon_count": 0,
+    "control_char_count": 0,
+    "digit_ratio": 0,
+    "whitespace_ratio": 0,
+    "sql_keyword_count": 0,
+    "sql_comment_marker_count": 0,
+    "path_traversal_count": 0,
+    "script_tag_present": 0,
+    "ssi_marker_present": 0
+  },
+  "constant_features": [
+    "duplicate_param_count",
+    "control_char_count",
+    "path_traversal_count"
+  ],
+  "notes": [
+    "No model trained; no split or imputation performed.",
+    "Only the features object is an ML input; labels and metadata are separate.",
+    "Lengths are stored-string character counts, not wire byte lengths.",
+    "Query uses form semantics. Only form-urlencoded nonempty bodies supported.",
+    "Headers select the parser; header content and parameter names are not scanned.",
+    "Patterns are literal indicators, not a complete attack detector."
+  ]
+}

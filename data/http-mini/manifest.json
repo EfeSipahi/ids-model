@@ -1,0 +1,36 @@
+{
+  "seed": 42,
+  "dataset": "CSIC 2010",
+  "sources": [
+    {
+      "file": "normalTrafficTraining.txt",
+      "sha256": "d51de812d9201ef2b173b6ae3e3e740c309047ac85545c06c51d6fb1ddbc1e63",
+      "bytes": 20148988,
+      "detected_requests": 36000,
+      "parsed": 36000,
+      "skipped": {},
+      "url": "https://raw.githubusercontent.com/msudol/Web-Application-Attack-Datasets/master/OriginalDataSets/csic_2010/normalTrafficTraining.txt"
+    },
+    {
+      "file": "anomalousTrafficTest.txt",
+      "sha256": "12fa4f0d496ceb859bb2652abf7f0f0ed8c59e1d9ce501b8a9a0ef38a625c046",
+      "bytes": 15734523,
+      "detected_requests": 25065,
+      "parsed": 25065,
+      "skipped": {},
+      "url": "https://raw.githubusercontent.com/msudol/Web-Application-Attack-Datasets/master/OriginalDataSets/csic_2010/anomalousTrafficTest.txt"
+    }
+  ],
+  "notes": [],
+  "total_selected": 1000,
+  "conflicting_content_groups_removed": 0,
+  "unique_content_available": 25597,
+  "counts": {
+    "anomalous/POST": 250,
+    "anomalous/GET": 250,
+    "normal/POST": 250,
+    "normal/GET": 250
+  },
+  "split": "Not split yet. Split by request-template similarity before training; exact content deduplication alone is insufficient.",
+  "decoding": "Latin-1 reversible byte mapping; no URL percent decoding. Length-validated bodies; ambiguous requests excluded."
+}

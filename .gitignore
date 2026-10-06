@@ -1,0 +1,31 @@
+# Python ortamı ve önbellekler
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Kişisel notlar: yalnız kendi bilgisayarında kalır, repoya girmez.
+/local/
+
+# Kişisel araç / editör ayarları
+.agents/
+.codex/
+.claude/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Gizli bilgiler
+.env
+.env.*
+
+# İndirilen özgün veri büyüktür (yüzlerce MB); README'deki talimatla indirilir.
+/data/raw/*
+!/data/raw/.gitkeep
+
+# Tekrar eğitim denemeleri; paylaşılacak deney bilinçli olarak eklenir.
+/models/*-repeat/

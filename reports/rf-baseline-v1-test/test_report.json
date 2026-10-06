@@ -1,0 +1,71 @@
+{
+  "evaluated_at_utc": "2026-09-27T20:29:05.577920+00:00",
+  "evaluation": "final_test_of_fixed_rf_baseline_v1",
+  "test_evaluated": true,
+  "test_records": 199,
+  "test_groups": 171,
+  "labels": {
+    "0": 100,
+    "1": 99
+  },
+  "test_features_sha256": "38ef640d6481a21d706ad8627ae71c38844a49d79040d906757ce509a99b190f",
+  "model_sha256": "fd1dfaa5a56ec03775285829f5c46db022b3385d871b64c467c0cdf0d9767c0f",
+  "training_run_sha256": "6fc553352bcfa3836d65be25cbb6b03719467ced10351c5022b0ef1336053113",
+  "evaluation_script_sha256": "4f68fa8bb92eb093876bcd2a4d9117188ac2405b7058b5cd15da2217887a2ab3",
+  "model_unchanged": true,
+  "refit": false,
+  "threshold_tuned": false,
+  "positive_label": 1,
+  "confusion_matrix_order": "rows=actual [0,1], columns=predicted [0,1]",
+  "metrics": {
+    "confusion_matrix": [
+      [
+        72,
+        28
+      ],
+      [
+        36,
+        63
+      ]
+    ],
+    "tn": 72,
+    "fp": 28,
+    "fn": 36,
+    "tp": 63,
+    "accuracy": 0.678391959798995,
+    "precision": 0.6923076923076923,
+    "recall": 0.6363636363636364,
+    "f1": 0.6631578947368421,
+    "false_positive_rate": 0.28
+  },
+  "validation_metrics": {
+    "confusion_matrix": [
+      [
+        81,
+        18
+      ],
+      [
+        32,
+        66
+      ]
+    ],
+    "tn": 81,
+    "fp": 18,
+    "fn": 32,
+    "tp": 66,
+    "accuracy": 0.7461928934010152,
+    "precision": 0.7857142857142857,
+    "recall": 0.673469387755102,
+    "f1": 0.7252747252747253,
+    "false_positive_rate": 0.18181818181818182
+  },
+  "sklearn_version": "1.9.1",
+  "limitations": [
+    "Small balanced synthetic CSIC pilot; not real traffic performance.",
+    "Content grouping is heuristic; shared endpoints are intentional.",
+    "Global features were inspected before this run.",
+    "Anomalous is a source label, not proof of an attack.",
+    "This test is now observed; do not tune against it and call it unseen.",
+    "Metrics are per request; grouped requests are not fully independent."
+  ]
+}
