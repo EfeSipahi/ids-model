@@ -1,0 +1,74 @@
+{
+  "evaluated_at_utc": "2026-10-13T09:36:48.847970+00:00",
+  "evaluation": "final_test_of_fixed_logreg_baseline_v1",
+  "test_evaluated": true,
+  "test_records": 199,
+  "test_groups": 171,
+  "labels": {
+    "0": 100,
+    "1": 99
+  },
+  "test_features_sha256": "38ef640d6481a21d706ad8627ae71c38844a49d79040d906757ce509a99b190f",
+  "model_sha256": "a10338f42ba4978e500a7d9e8d57e2a626dd0c4aee75b7aaecdea9ee3f057ac3",
+  "training_run_sha256": "2140f3268a7fe0072631a5feeebcd442f07a0ad67b546b80d7df22a63076f2d2",
+  "evaluation_script_sha256": "02771e8d14daeea7ad2c0e5a75e2c67bf059c0a2a651e6c2793edc40b8e4b502",
+  "model_unchanged": true,
+  "refit": false,
+  "threshold_tuned": false,
+  "positive_label": 1,
+  "confusion_matrix_order": "rows=actual [0,1], columns=predicted [0,1]",
+  "metrics": {
+    "confusion_matrix": [
+      [
+        61,
+        39
+      ],
+      [
+        34,
+        65
+      ]
+    ],
+    "tn": 61,
+    "fp": 39,
+    "fn": 34,
+    "tp": 65,
+    "accuracy": 0.6331658291457286,
+    "precision": 0.625,
+    "recall": 0.6565656565656566,
+    "f1": 0.6403940886699507,
+    "false_positive_rate": 0.39,
+    "roc_auc": 0.7087878787878789
+  },
+  "validation_metrics": {
+    "confusion_matrix": [
+      [
+        74,
+        25
+      ],
+      [
+        30,
+        68
+      ]
+    ],
+    "tn": 74,
+    "fp": 25,
+    "fn": 30,
+    "tp": 68,
+    "accuracy": 0.7208121827411168,
+    "precision": 0.7311827956989247,
+    "recall": 0.6938775510204082,
+    "f1": 0.7120418848167539,
+    "false_positive_rate": 0.25252525252525254,
+    "roc_auc": 0.8012780869923728
+  },
+  "sklearn_version": "1.9.1",
+  "limitations": [
+    "Small balanced synthetic CSIC pilot; not real traffic performance.",
+    "Content grouping is heuristic; shared endpoints are intentional.",
+    "Global features were inspected before this run.",
+    "Anomalous is a source label, not proof of an attack.",
+    "This test split was first observed by rf-baseline-v1; it was not unseen for the project.",
+    "This test is now observed; do not tune against it and call it unseen.",
+    "Metrics are per request; grouped requests are not fully independent."
+  ]
+}

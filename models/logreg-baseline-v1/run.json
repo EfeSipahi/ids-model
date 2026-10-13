@@ -1,0 +1,218 @@
+{
+  "version": "logreg-baseline-v1",
+  "created_at_utc": "2026-10-12T22:03:43.512280+00:00",
+  "status": "provisional_validation_baseline",
+  "model_trained": true,
+  "test_features_loaded": false,
+  "test_evaluated": false,
+  "training_records": 604,
+  "validation_records": 197,
+  "test_records_from_split_report": 199,
+  "split_version": "content-split-v1",
+  "split_changed": false,
+  "source_sha256": {
+    "data/http-mini/requests.jsonl": "9ae3394d3ead353e8ca88b8ebb0b4c2d0cf7ac0a62a016aa58029807c3f39d76",
+    "data/processed/http-mini-features-v1/features.jsonl": "6f0450d2b6c0b512f6134a992aefd5caf465c695d2570a0274f229760196aa7f",
+    "data/processed/http-mini-splits-v1/split_report.json": "5aced51711807ff8683f0b82a4215b5a0e9a74f7c9683d0212b6cebdab94b5a5",
+    "data/processed/http-mini-splits-v1/assignments.jsonl": "ffc25e9c48df9b9917549a2297f668a4d3b09b4fc0ad1513174cd1980cc724fc",
+    "data/processed/http-mini-splits-v1/train_features.jsonl": "3d5a13f5c715d7db3e97ea3f655a9535db8a743c55197b6d635f4aae92c439d3",
+    "data/processed/http-mini-splits-v1/validation_features.jsonl": "c95905d9b038e0a2bf7bc0fdd03424a7494dffeb34fbd9544e6adf4623a7fd71"
+  },
+  "code_sha256": {
+    "train_logistic_regression.py": "3212be66a57bb4576082b390e7a1ab34bdc89e81b641bcfe5f7474103d475e99",
+    "train_random_forest.py": "b0d3841d4d1883c70d1ef56509af19398e58de9cb374d0b155068e4abcf89616",
+    "extract_features.py": "2814deccc0e4b446b164c91038be085bcff9d2a2940459659ded8a7e623818e3"
+  },
+  "extractor_version": "1.0.0",
+  "encoding": "latin-1",
+  "feature_set": "basic16_plus_pattern5",
+  "input_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "duplicate_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "control_char_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "path_traversal_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "retained_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "dropped_constant_features": [
+    "duplicate_param_count",
+    "control_char_count",
+    "path_traversal_count"
+  ],
+  "train_constant_values": {
+    "duplicate_param_count": 0.0,
+    "control_char_count": 0.0,
+    "path_traversal_count": 0.0
+  },
+  "train_variances": {
+    "path_length": 13.044329196087892,
+    "query_length": 325.0,
+    "body_length": 824.0,
+    "query_param_count": 13.0,
+    "body_param_count": 13.0,
+    "duplicate_param_count": 0.0,
+    "max_value_length": 346.0,
+    "mean_value_length": 54.64495499594713,
+    "percent_encoding_count": 33.007113174860756,
+    "percent_encoding_ratio": 0.0068151308546035745,
+    "quote_count": 1.7224107495285297,
+    "angle_bracket_count": 0.32125783956843995,
+    "semicolon_count": 0.12761501688522434,
+    "control_char_count": 0.0,
+    "digit_ratio": 0.007232706465274061,
+    "whitespace_ratio": 0.001144529574348002,
+    "sql_keyword_count": 0.20911363536686992,
+    "sql_comment_marker_count": 0.0943242620937678,
+    "path_traversal_count": 0.0,
+    "script_tag_present": 0.01306960221042937,
+    "ssi_marker_present": 0.019472830139028983
+  },
+  "missing_value_policy": "Reject null/NaN/inf; no imputation; finite guard saved in pipeline.",
+  "preprocessing_fit_split": "train",
+  "scaling": "log1p then StandardScaler, fitted on train",
+  "labels": {
+    "0": "normal",
+    "1": "anomalous"
+  },
+  "positive_label": 1,
+  "decision": {
+    "threshold": 0.5,
+    "rule": "score > 0.5; tie at 0.5 predicts class 0",
+    "threshold_tuned": false,
+    "probability_calibrated": false
+  },
+  "logreg_parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": null,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "iterations": 34,
+  "coefficients": {
+    "path_length": 0.022110110813480716,
+    "query_length": -0.7555626072842048,
+    "body_length": -0.9234841796671415,
+    "query_param_count": -1.7012232306859933,
+    "body_param_count": -1.4826876515528338,
+    "max_value_length": -0.43591878313951343,
+    "mean_value_length": 0.5593931808001943,
+    "percent_encoding_count": 0.9560663674204055,
+    "percent_encoding_ratio": 0.8586533835992277,
+    "quote_count": 0.7853857985241898,
+    "angle_bracket_count": 0.17132026327366331,
+    "semicolon_count": 0.1822157206731902,
+    "digit_ratio": 0.286076787419915,
+    "whitespace_ratio": -0.40334174153674035,
+    "sql_keyword_count": 0.22279387506877943,
+    "sql_comment_marker_count": 0.13047299906688314,
+    "script_tag_present": 0.1210963718124335,
+    "ssi_marker_present": 0.12585993240676124
+  },
+  "intercept": 0.5429925885066256,
+  "validation": {
+    "logistic_regression": {
+      "confusion_matrix": [
+        [
+          74,
+          25
+        ],
+        [
+          30,
+          68
+        ]
+      ],
+      "tn": 74,
+      "fp": 25,
+      "fn": 30,
+      "tp": 68,
+      "accuracy": 0.7208121827411168,
+      "precision": 0.7311827956989247,
+      "recall": 0.6938775510204082,
+      "f1": 0.7120418848167539,
+      "false_positive_rate": 0.25252525252525254,
+      "roc_auc": 0.8012780869923728
+    },
+    "dummy_most_frequent": {
+      "confusion_matrix": [
+        [
+          0,
+          99
+        ],
+        [
+          0,
+          98
+        ]
+      ],
+      "tn": 0,
+      "fp": 99,
+      "fn": 0,
+      "tp": 98,
+      "accuracy": 0.49746192893401014,
+      "precision": 0.49746192893401014,
+      "recall": 1.0,
+      "f1": 0.6644067796610169,
+      "false_positive_rate": 1.0
+    }
+  },
+  "packages": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "limitations": [
+    "Small balanced synthetic CSIC pilot; not real traffic performance.",
+    "Content grouping is heuristic; shared endpoints are intentional.",
+    "Global features were inspected before this run.",
+    "Anomalous is a source label, not proof of an attack.",
+    "No hyperparameter search, threshold tuning, or basic-only ablation performed.",
+    "The test split was already observed by rf-baseline-v1; it is not unseen for this project."
+  ],
+  "pipeline_sha256": "a10338f42ba4978e500a7d9e8d57e2a626dd0c4aee75b7aaecdea9ee3f057ac3"
+}

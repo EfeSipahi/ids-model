@@ -1,0 +1,244 @@
+{
+  "version": "logreg-tuned-v2",
+  "created_at_utc": "2026-10-13T09:55:47.113111+00:00",
+  "status": "tuned_on_train_cross_validation",
+  "model_trained": true,
+  "test_features_loaded": false,
+  "test_evaluated": false,
+  "training_records": 604,
+  "validation_records": 197,
+  "test_records_from_split_report": 199,
+  "split_version": "content-split-v1",
+  "split_changed": false,
+  "source_sha256": {
+    "data/http-mini/requests.jsonl": "9ae3394d3ead353e8ca88b8ebb0b4c2d0cf7ac0a62a016aa58029807c3f39d76",
+    "data/processed/http-mini-features-v1/features.jsonl": "6f0450d2b6c0b512f6134a992aefd5caf465c695d2570a0274f229760196aa7f",
+    "data/processed/http-mini-splits-v1/split_report.json": "5aced51711807ff8683f0b82a4215b5a0e9a74f7c9683d0212b6cebdab94b5a5",
+    "data/processed/http-mini-splits-v1/assignments.jsonl": "ffc25e9c48df9b9917549a2297f668a4d3b09b4fc0ad1513174cd1980cc724fc",
+    "data/processed/http-mini-splits-v1/train_features.jsonl": "3d5a13f5c715d7db3e97ea3f655a9535db8a743c55197b6d635f4aae92c439d3",
+    "data/processed/http-mini-splits-v1/validation_features.jsonl": "c95905d9b038e0a2bf7bc0fdd03424a7494dffeb34fbd9544e6adf4623a7fd71"
+  },
+  "code_sha256": {
+    "train_tuned.py": "271cb4b13321e79b8007cc5cde5547e93058216ab12d3566df512267a3e75cc9",
+    "train_logistic_regression.py": "3212be66a57bb4576082b390e7a1ab34bdc89e81b641bcfe5f7474103d475e99",
+    "train_random_forest.py": "b0d3841d4d1883c70d1ef56509af19398e58de9cb374d0b155068e4abcf89616",
+    "extract_features.py": "2814deccc0e4b446b164c91038be085bcff9d2a2940459659ded8a7e623818e3"
+  },
+  "extractor_version": "1.0.0",
+  "encoding": "latin-1",
+  "feature_set": "basic16_plus_pattern5",
+  "input_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "duplicate_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "control_char_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "path_traversal_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "retained_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "dropped_constant_features": [
+    "duplicate_param_count",
+    "control_char_count",
+    "path_traversal_count"
+  ],
+  "missing_value_policy": "Reject null/NaN/inf; no imputation; finite guard saved in pipeline.",
+  "preprocessing_fit_split": "train",
+  "scaling": "log1p then StandardScaler, fitted on train",
+  "labels": {
+    "0": "normal",
+    "1": "anomalous"
+  },
+  "positive_label": 1,
+  "model": "logistic_regression",
+  "model_step": "logreg",
+  "model_parameters": {
+    "C": 100.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 1.0,
+    "max_iter": 5000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "liblinear",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "selection": {
+    "data": "train only; validation and test not used",
+    "cross_validation": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42) by group_id",
+    "training_groups": 523,
+    "candidates": 36,
+    "parameter_rule": "max out-of-fold F1 at threshold 0.5; ties: lower false positive rate, then earlier (simpler) candidate",
+    "threshold_rule": "max out-of-fold F1 of the selected candidate; ties: closest to 0.5",
+    "thresholds_tried": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7
+    ],
+    "selected_index": 26,
+    "selected_params": {
+      "C": 100.0,
+      "class_weight": null,
+      "max_iter": 5000,
+      "l1_ratio": 1.0,
+      "solver": "liblinear",
+      "random_state": 42
+    },
+    "cross_validation_at_0_5": {
+      "confusion_matrix": [
+        [
+          220,
+          81
+        ],
+        [
+          101,
+          202
+        ]
+      ],
+      "tn": 220,
+      "fp": 81,
+      "fn": 101,
+      "tp": 202,
+      "accuracy": 0.6986754966887417,
+      "precision": 0.7137809187279152,
+      "recall": 0.6666666666666666,
+      "f1": 0.689419795221843,
+      "false_positive_rate": 0.2691029900332226,
+      "roc_auc": 0.7745249608017282
+    },
+    "cross_validation_at_selected_threshold": {
+      "confusion_matrix": [
+        [
+          201,
+          100
+        ],
+        [
+          64,
+          239
+        ]
+      ],
+      "tn": 201,
+      "fp": 100,
+      "fn": 64,
+      "tp": 239,
+      "accuracy": 0.7284768211920529,
+      "precision": 0.7050147492625368,
+      "recall": 0.7887788778877888,
+      "f1": 0.7445482866043613,
+      "false_positive_rate": 0.33222591362126247,
+      "roc_auc": 0.7745249608017282
+    }
+  },
+  "decision": {
+    "threshold": 0.4,
+    "rule": "score > 0.4; tie at the threshold predicts class 0",
+    "threshold_tuned": true,
+    "threshold_source": "out-of-fold train predictions",
+    "probability_calibrated": false
+  },
+  "validation": {
+    "logistic_regression": {
+      "confusion_matrix": [
+        [
+          63,
+          36
+        ],
+        [
+          22,
+          76
+        ]
+      ],
+      "tn": 63,
+      "fp": 36,
+      "fn": 22,
+      "tp": 76,
+      "accuracy": 0.7055837563451777,
+      "precision": 0.6785714285714286,
+      "recall": 0.7755102040816326,
+      "f1": 0.7238095238095238,
+      "false_positive_rate": 0.36363636363636365,
+      "roc_auc": 0.8156050298907441
+    },
+    "dummy_most_frequent": {
+      "confusion_matrix": [
+        [
+          0,
+          99
+        ],
+        [
+          0,
+          98
+        ]
+      ],
+      "tn": 0,
+      "fp": 99,
+      "fn": 0,
+      "tp": 98,
+      "accuracy": 0.49746192893401014,
+      "precision": 0.49746192893401014,
+      "recall": 1.0,
+      "f1": 0.6644067796610169,
+      "false_positive_rate": 1.0
+    }
+  },
+  "packages": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "limitations": [
+    "Small balanced synthetic CSIC pilot; not real traffic performance.",
+    "Content grouping is heuristic; shared endpoints are intentional.",
+    "Global features were inspected before this run.",
+    "Anomalous is a source label, not proof of an attack.",
+    "Parameters and threshold were chosen on 604 training records; cross-validation estimates are noisy.",
+    "The test split was already observed by the v1 baselines; it is not unseen for this project."
+  ],
+  "pipeline_sha256": "dbf586c37e78d85de6eafcdcdfdbb3ab0503b38f45af7f551609a2fe79876c70"
+}

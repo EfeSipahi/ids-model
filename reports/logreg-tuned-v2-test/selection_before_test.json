@@ -1,0 +1,148 @@
+{
+  "fixed_at_utc": "2026-10-13T10:00:31.646289+00:00",
+  "model": "models/logreg-tuned-v2/pipeline.joblib",
+  "model_sha256": "dbf586c37e78d85de6eafcdcdfdbb3ab0503b38f45af7f551609a2fe79876c70",
+  "training_run_sha256": "42a4c2615ac7a8a43d82bddaa6082d5e5652d85917704f30508afe157c3ed01d",
+  "evaluation_script_sha256": "0de4bc2acf96d0e243080ff23ff2d2d5a5afe9d259171f7ff955915a198a4dc2",
+  "input_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "duplicate_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "control_char_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "path_traversal_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "retained_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "model_parameters": {
+    "C": 100.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 1.0,
+    "max_iter": 5000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "liblinear",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "scaling": "log1p then StandardScaler, fitted on train",
+  "decision": {
+    "threshold": 0.4,
+    "rule": "score > 0.4; tie at the threshold predicts class 0",
+    "threshold_tuned": true,
+    "threshold_source": "out-of-fold train predictions",
+    "probability_calibrated": false
+  },
+  "selection": {
+    "data": "train only; validation and test not used",
+    "cross_validation": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42) by group_id",
+    "training_groups": 523,
+    "candidates": 36,
+    "parameter_rule": "max out-of-fold F1 at threshold 0.5; ties: lower false positive rate, then earlier (simpler) candidate",
+    "threshold_rule": "max out-of-fold F1 of the selected candidate; ties: closest to 0.5",
+    "thresholds_tried": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7
+    ],
+    "selected_index": 26,
+    "selected_params": {
+      "C": 100.0,
+      "class_weight": null,
+      "max_iter": 5000,
+      "l1_ratio": 1.0,
+      "solver": "liblinear",
+      "random_state": 42
+    },
+    "cross_validation_at_0_5": {
+      "confusion_matrix": [
+        [
+          220,
+          81
+        ],
+        [
+          101,
+          202
+        ]
+      ],
+      "tn": 220,
+      "fp": 81,
+      "fn": 101,
+      "tp": 202,
+      "accuracy": 0.6986754966887417,
+      "precision": 0.7137809187279152,
+      "recall": 0.6666666666666666,
+      "f1": 0.689419795221843,
+      "false_positive_rate": 0.2691029900332226,
+      "roc_auc": 0.7745249608017282
+    },
+    "cross_validation_at_selected_threshold": {
+      "confusion_matrix": [
+        [
+          201,
+          100
+        ],
+        [
+          64,
+          239
+        ]
+      ],
+      "tn": 201,
+      "fp": 100,
+      "fn": 64,
+      "tp": 239,
+      "accuracy": 0.7284768211920529,
+      "precision": 0.7050147492625368,
+      "recall": 0.7887788778877888,
+      "f1": 0.7445482866043613,
+      "false_positive_rate": 0.33222591362126247,
+      "roc_auc": 0.7745249608017282
+    }
+  },
+  "training_records": 604,
+  "refit": false
+}

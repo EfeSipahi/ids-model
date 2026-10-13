@@ -29,3 +29,4 @@ __pycache__/
 
 # Tekrar eğitim denemeleri; paylaşılacak deney bilinçli olarak eklenir.
 /models/*-repeat/
+/reports/*-repeat/

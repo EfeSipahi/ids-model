@@ -1,0 +1,98 @@
+{
+  "evaluated_at_utc": "2026-10-13T10:00:31.742632+00:00",
+  "evaluation": "final_test_of_fixed_logreg-tuned-v2",
+  "test_evaluated": true,
+  "test_records": 199,
+  "test_groups": 171,
+  "labels": {
+    "0": 100,
+    "1": 99
+  },
+  "test_features_sha256": "38ef640d6481a21d706ad8627ae71c38844a49d79040d906757ce509a99b190f",
+  "model_sha256": "dbf586c37e78d85de6eafcdcdfdbb3ab0503b38f45af7f551609a2fe79876c70",
+  "training_run_sha256": "42a4c2615ac7a8a43d82bddaa6082d5e5652d85917704f30508afe157c3ed01d",
+  "evaluation_script_sha256": "0de4bc2acf96d0e243080ff23ff2d2d5a5afe9d259171f7ff955915a198a4dc2",
+  "model_unchanged": true,
+  "refit": false,
+  "threshold": 0.4,
+  "threshold_tuned_on_test": false,
+  "positive_label": 1,
+  "confusion_matrix_order": "rows=actual [0,1], columns=predicted [0,1]",
+  "metrics": {
+    "confusion_matrix": [
+      [
+        43,
+        57
+      ],
+      [
+        27,
+        72
+      ]
+    ],
+    "tn": 43,
+    "fp": 57,
+    "fn": 27,
+    "tp": 72,
+    "accuracy": 0.5778894472361809,
+    "precision": 0.5581395348837209,
+    "recall": 0.7272727272727273,
+    "f1": 0.631578947368421,
+    "false_positive_rate": 0.57,
+    "roc_auc": 0.7237373737373738
+  },
+  "validation_metrics": {
+    "confusion_matrix": [
+      [
+        63,
+        36
+      ],
+      [
+        22,
+        76
+      ]
+    ],
+    "tn": 63,
+    "fp": 36,
+    "fn": 22,
+    "tp": 76,
+    "accuracy": 0.7055837563451777,
+    "precision": 0.6785714285714286,
+    "recall": 0.7755102040816326,
+    "f1": 0.7238095238095238,
+    "false_positive_rate": 0.36363636363636365,
+    "roc_auc": 0.8156050298907441
+  },
+  "cross_validation_metrics": {
+    "confusion_matrix": [
+      [
+        201,
+        100
+      ],
+      [
+        64,
+        239
+      ]
+    ],
+    "tn": 201,
+    "fp": 100,
+    "fn": 64,
+    "tp": 239,
+    "accuracy": 0.7284768211920529,
+    "precision": 0.7050147492625368,
+    "recall": 0.7887788778877888,
+    "f1": 0.7445482866043613,
+    "false_positive_rate": 0.33222591362126247,
+    "roc_auc": 0.7745249608017282
+  },
+  "sklearn_version": "1.9.1",
+  "limitations": [
+    "Small balanced synthetic CSIC pilot; not real traffic performance.",
+    "Content grouping is heuristic; shared endpoints are intentional.",
+    "Global features were inspected before this run.",
+    "Anomalous is a source label, not proof of an attack.",
+    "Parameters and threshold were chosen on 604 training records; cross-validation estimates are noisy.",
+    "The test split was already observed by the v1 baselines; it is not unseen for this project.",
+    "This test is now observed for this model; do not tune against it and call it unseen.",
+    "Metrics are per request; grouped requests are not fully independent."
+  ]
+}

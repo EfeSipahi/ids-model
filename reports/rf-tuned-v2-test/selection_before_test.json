@@ -1,0 +1,153 @@
+{
+  "fixed_at_utc": "2026-10-13T10:00:26.390533+00:00",
+  "model": "models/rf-tuned-v2/pipeline.joblib",
+  "model_sha256": "5fae0374a2e162ab22b1a491c3ae7af7530dbcef40b863d1a497642ebb075b41",
+  "training_run_sha256": "70acffb6e5a779f62294db7d8e78441458c1ed9c1f4dd5cf65eacb83ae687956",
+  "evaluation_script_sha256": "0de4bc2acf96d0e243080ff23ff2d2d5a5afe9d259171f7ff955915a198a4dc2",
+  "input_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "duplicate_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "control_char_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "path_traversal_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "retained_feature_order": [
+    "path_length",
+    "query_length",
+    "body_length",
+    "query_param_count",
+    "body_param_count",
+    "max_value_length",
+    "mean_value_length",
+    "percent_encoding_count",
+    "percent_encoding_ratio",
+    "quote_count",
+    "angle_bracket_count",
+    "semicolon_count",
+    "digit_ratio",
+    "whitespace_ratio",
+    "sql_keyword_count",
+    "sql_comment_marker_count",
+    "script_tag_present",
+    "ssi_marker_present"
+  ],
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": 10,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 200,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "scaling": null,
+  "decision": {
+    "threshold": 0.5,
+    "rule": "score > 0.5; tie at the threshold predicts class 0",
+    "threshold_tuned": true,
+    "threshold_source": "out-of-fold train predictions",
+    "probability_calibrated": false
+  },
+  "selection": {
+    "data": "train only; validation and test not used",
+    "cross_validation": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=42) by group_id",
+    "training_groups": 523,
+    "candidates": 64,
+    "parameter_rule": "max out-of-fold F1 at threshold 0.5; ties: lower false positive rate, then earlier (simpler) candidate",
+    "threshold_rule": "max out-of-fold F1 of the selected candidate; ties: closest to 0.5",
+    "thresholds_tried": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7
+    ],
+    "selected_index": 14,
+    "selected_params": {
+      "random_state": 42,
+      "n_jobs": -1,
+      "n_estimators": 200,
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "cross_validation_at_0_5": {
+      "confusion_matrix": [
+        [
+          265,
+          36
+        ],
+        [
+          85,
+          218
+        ]
+      ],
+      "tn": 265,
+      "fp": 36,
+      "fn": 85,
+      "tp": 218,
+      "accuracy": 0.7996688741721855,
+      "precision": 0.8582677165354331,
+      "recall": 0.7194719471947195,
+      "f1": 0.7827648114901257,
+      "false_positive_rate": 0.11960132890365449,
+      "roc_auc": 0.8483383222043135
+    },
+    "cross_validation_at_selected_threshold": {
+      "confusion_matrix": [
+        [
+          265,
+          36
+        ],
+        [
+          85,
+          218
+        ]
+      ],
+      "tn": 265,
+      "fp": 36,
+      "fn": 85,
+      "tp": 218,
+      "accuracy": 0.7996688741721855,
+      "precision": 0.8582677165354331,
+      "recall": 0.7194719471947195,
+      "f1": 0.7827648114901257,
+      "false_positive_rate": 0.11960132890365449,
+      "roc_auc": 0.8483383222043135
+    }
+  },
+  "training_records": 604,
+  "refit": false
+}
