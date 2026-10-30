@@ -26,6 +26,8 @@ __pycache__/
 # İndirilen özgün veri büyüktür (yüzlerce MB); README'deki talimatla indirilir.
 /data/raw/*
 !/data/raw/.gitkeep
+!/data/raw/download_datasets.sh
+!/data/raw/DATASETS.md
 
 # Tekrar eğitim denemeleri; paylaşılacak deney bilinçli olarak eklenir.
 /models/*-repeat/

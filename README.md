@@ -27,7 +27,7 @@ Model girdisi yalnız `features` alanıdır; kaynak ve grup metadata'sı kullan�
 ## Dosya yapısı
 
 ```text
-ids-model/
+Lorica/
 ├── data/
 │   ├── http-mini/     # CSIC 2010'dan seçilmiş 1.000 istek (repoda)
 │   ├── processed/     # Betiklerin ürettiği özellik, grup ve ayrım tabloları (repoda)
@@ -96,8 +96,8 @@ Proje Linux üzerinde (Fedora) bu sürümlerle geliştirildi ve test edildi; ba�
 ## Kurulum
 
 ```bash
-git clone https://github.com/EfeSipahi/ids-model.git
-cd ids-model
+git clone https://github.com/EfeSipahi/Lorica.git
+cd Lorica
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -137,7 +137,7 @@ Eğitim ve değerlendirme betikleri var olan çıktı dizininin üzerine yazmaz.
 | Klasör | Boyut | Nasıl edinilir |
 | --- | --- | --- |
 | `data/raw/modsec-learn-dataset/` | ~460 MB | `git clone https://github.com/pralab/modsec-learn-dataset data/raw/modsec-learn-dataset` |
-| `data/raw/owasp/` | ~380 MB | Anonimleştirilmiş ModSecurity denetim logları; ekip içinde paylaşılır |
+| `data/raw/owasp/` | ~380 MB | Lucz & Forstner'ın herkese açık 30 günlük ModSecurity denetim logları (CC-BY-4.0, DOI [10.5281/zenodo.17178461](https://zenodo.org/records/17178461)). 19 Ekim 2026'da doğrulandı: Zenodo'daki `owasp.zip` (MD5 `95b7a8237abc163d8ca31e49f7318efd`) açıldığında çıkan 30 log dosyası bu klasördekilerle bayt bayt aynı |
 
 Bu iki veri seti henüz hiçbir betikte kullanılmıyor. Özgün verinin üzerine yazılmaz; temizleme ve dönüşüm sonuçları `data/processed/` altında ayrı dosyalara kaydedilir.
 
